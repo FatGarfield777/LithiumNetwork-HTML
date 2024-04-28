@@ -61,8 +61,7 @@
                 ><span>Home</span></a
               ><a href="games.html" class="navbar-link1 nav-link"
                 ><span>Games</span></a
-              ><a href="apps.html" class="navbar-link2 nav-link"
-                ><span>Apps</span></a
+              ><span class="navbar-link2 nav-link"><span>Apps</span></span
               ><a
                 href="https://discord.com/invite/byvVm9ybwY"
                 target="_blank"
@@ -151,25 +150,81 @@
         ><div class="games-container1"
           ><div class="games-container2">
             <style>
-                body {
-                  color: white;
-                  font-family: Arial, sans-serif;
-                }
-
-                .game {
-                padding: 10px;
-                transition: border-color 0.3s ease;
-                width: calc(25% - 20px); /* Adjust the width to fit four games in a row */
-                text-align: center;
-                display: inline-block;
+              body {
+                color: white;
+                font-family: Arial, sans-serif;
               }
 
               .games-container {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 10px; /* Reduce the gap between games */
-                justify-content: space-between; /* Distribute space between games */
-                margin-bottom: -10px; /* Remove margin bottom to prevent extra space */
+                gap: 20px;
+                overflow: hidden; /* Change to hidden to remove scrollbar */
+              }
+
+              .game {
+                padding: 10px;
+                transition: border-color 0.3s ease;
+                width: 170px;
+                text-align: center;
+                display: inline-block; /* Replace float with inline-block */
+                background-color: #333; /* Add background color to distinguish games */
+              }
+
+              .game:hover {
+                border-color: #FFFFFF;
+              }
+
+              .games-container a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                position: relative;
+              }
+
+              .games-container img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                border: none;
+              }
+
+              .games-container p {
+                margin: 5px 0 0;
+              }
+
+              .author {
+                font-size: 12px;
+                color: #666666;
+              }
+
+              .tag-container {
+                margin-top: 5px;
+              }
+
+              .tag {
+                color: black;
+                background-color: #80FF44;
+                cursor: pointer;
+                padding: 3px 6px;
+                border-radius: 10px;
+                margin-top: 5px;
+                display: inline-block;
+                margin-right: 5px;
+              }
+
+              .tag-list {
+                margin-top: 10px;
+              }
+
+              .tag-list span {
+                margin-right: 10px;
+                cursor: pointer;
+                display: inline-block;
+                margin-bottom: 5px;
+                padding: 3px 6px;
+                border-radius: 10px;
+                background-color: #80FF44;
               }
 
               .clearfix::after {
@@ -177,68 +232,6 @@
                 display: table;
                 clear: both;
               }
-
-                .game:hover {
-                  border-color: #FFFFFF;
-                }
-
-                .games-container a {
-                  text-decoration: none;
-                  color: white;
-                  display: block;
-                  position: relative;
-                }
-
-                .games-container img {
-                  width: 100%;
-                  height: auto;
-                  border-radius: 8px;
-                  border: none;
-                }
-
-                .games-container p {
-                  margin: 5px 0 0;
-                }
-
-                .author {
-                  font-size: 12px;
-                  color: #666666;
-                }
-
-                .tag-container {
-                  margin-top: 5px;
-                }
-
-                .tag {
-                  color: black;
-                  background-color: #80FF44;
-                  cursor: pointer;
-                  padding: 3px 6px;
-                  border-radius: 10px;
-                  margin-top: 5px;
-                  display: inline-block;
-                  margin-right: 5px;
-                }
-
-                .tag-list {
-                  margin-top: 10px;
-                }
-
-                .tag-list span {
-                  margin-right: 10px;
-                  cursor: pointer;
-                  display: inline-block;
-                  margin-bottom: 5px;
-                  padding: 3px 6px;
-                  border-radius: 10px;
-                  background-color: #80FF44;
-                }
-
-                .clearfix::after {
-                  content: '';
-                  display: table;
-                  clear: both;
-                }
             </style>
 
             <input
@@ -301,7 +294,8 @@
               >
                 <img src="basketball-stars.png" alt="Basketball Stars" />
                 <div class="game-content">
-                  <p>Basketball Stars</p> <p class="author">MadPuffers</p>
+                  <p>Basketball Stars</p>
+                  <p class="author">MadPuffers</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -319,6 +313,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/cookie-clicker"
@@ -326,7 +321,8 @@
               >
                 <img src="cookie-clicker.png" alt="Cookie Clicker" />
                 <div class="game-content">
-                  <p>Cookie Clicker</p> <p class="author">DashNet</p>
+                  <p>Cookie Clicker</p>
+                  <p class="author">DashNet</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -338,6 +334,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/crossy-road"
@@ -345,7 +342,8 @@
               >
                 <img src="crossy-road.png" alt="Crossy Road" />
                 <div class="game-content">
-                  <p>Crossy Road</p> <p class="author">Hipster Whale</p>
+                  <p>Crossy Road</p>
+                  <p class="author">Hipster Whale</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -369,6 +367,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/doge-miner"
@@ -376,7 +375,8 @@
               >
                 <img src="doge-miner.png" alt="Doge Miner" />
                 <div class="game-content">
-                  <p>Doge Miner</p> <p class="author">rkn</p>
+                  <p>Doge Miner</p>
+                  <p class="author">rkn</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -388,6 +388,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/doge-miner-2"
@@ -395,7 +396,8 @@
               >
                 <img src="doge-miner-2.png" alt="Doge Miner 2" />
                 <div class="game-content">
-                  <p>Doge Miner 2</p> <p class="author">rkn</p>
+                  <p>Doge Miner 2</p>
+                  <p class="author">rkn</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -407,6 +409,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/flappy-bird"
@@ -414,7 +417,8 @@
               >
                 <img src="flappy-bird.png" alt="Flappy Bird" />
                 <div class="game-content">
-                  <p>Flappy Bird</p> <p class="author">Dong Nguyen</p>
+                  <p>Flappy Bird</p>
+                  <p class="author">Dong Nguyen</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -426,6 +430,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/garfield-2048"
@@ -433,7 +438,8 @@
               >
                 <img src="garfield-2048.png" alt="Garfield 2048" />
                 <div class="game-content">
-                  <p>Garfield 2048</p> <p class="author">FatGarfield777</p>
+                  <p>Garfield 2048</p>
+                  <p class="author">FatGarfield778</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -445,6 +451,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/geometry-dash"
@@ -452,7 +459,8 @@
               >
                 <img src="geometry-dash.png" alt="Geometry Dash" />
                 <div class="game-content">
-                  <p>Geometry Dash</p> <p class="author">RobTop Games</p>
+                  <p>Geometry Dash</p>
+                  <p class="author">RobTop Games</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -464,6 +472,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/hextris"
@@ -487,6 +496,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/little-alchemy"
@@ -494,7 +504,8 @@
               >
                 <img src="little-alchemy.png" alt="Little Alchemy" />
                 <div class="game-content">
-                  <p>Little Alchemy</p> <p class="author">Recloak</p>
+                  <p>Little Alchemy</p>
+                  <p class="author">Recloak</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -512,6 +523,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/little-alchemy-2"
@@ -519,7 +531,8 @@
               >
                 <img src="little-alchemy-2.png" alt="Little Alchemy 2" />
                 <div class="game-content">
-                  <p>Little Alchemy 2</p> <p class="author">Recloak</p>
+                  <p>Little Alchemy 2</p>
+                  <p class="author">Recloak</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -537,6 +550,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/minecraft"
@@ -544,7 +558,8 @@
               >
                 <img src="minecraft.png" alt="Minecraft" />
                 <div class="game-content">
-                  <p>Minecraft</p> <p class="author">Mojang</p>
+                  <p>Minecraft</p>
+                  <p class="author">Mojang</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -562,6 +577,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/paper-io"
@@ -569,7 +585,8 @@
               >
                 <img src="paper-io.png" alt="Paper.io" />
                 <div class="game-content">
-                  <p>Paper.io</p> <p class="author">Voodoo</p>
+                  <p>Paper.io</p>
+                  <p class="author">Voodoo</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -581,6 +598,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/retro-bowl"
@@ -588,7 +606,8 @@
               >
                 <img src="retro-bowl.png" alt="Retro Bowl" />
                 <div class="game-content">
-                  <p>Retro Bowl</p> <p class="author">New Star Games</p>
+                  <p>Retro Bowl</p>
+                  <p class="author">New Star Games</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -606,6 +625,24 @@
                   </div>
                 </div>
               </a>
+
+              <a class="game" href="https://example.com/roblox" target="_blank">
+                <img src="roblox.png" alt="Roblox" />
+                <div class="game-content">
+                  <p>Roblox</p>
+                  <p class="author">Roblox Corporation</p>
+                  <div class="tag-container">
+                    <span
+                      class="tag"
+                      onclick="filterByTag("
+                      arcade&#x27;)&#x27;=""
+                      >Arcade</span
+                    >
+                    <span class="tag" style="display:none;">All</span>
+                  </div>
+                </div>
+              </a>
+
               <a
                 class="game"
                 href="https://example.com/scrap-metal-3-infernal-trap"
@@ -635,100 +672,16 @@
                   </div>
                 </div>
               </a>
-              <a class="game" href="https://example.com/snake" target="_blank">
-                <img src="snake.png" alt="Snake" />
-                <div class="game-content">
-                  <p>Snake</p> <p class="author">FatGarfield777</p>
-                  <div class="tag-container">
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      puzzle&#x27;)&#x27;=""
-                      >Puzzle</span
-                    >
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      speed&#x27;)&#x27;=""
-                      >Speed</span
-                    >
-                    <span class="tag" style="display:none;">All</span>
-                  </div>
-                </div>
-              </a>
-              <a class="game" href="https://example.com/stack" target="_blank">
-                <img src="stack.png" alt="Stack" />
-                <div class="game-content">
-                  <p>Stack</p> <p class="author">Ketchapp</p>
-                  <div class="tag-container">
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      puzzle&#x27;)&#x27;=""
-                      >Puzzle</span
-                    >
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      speed&#x27;)&#x27;=""
-                      >Speed</span
-                    >
-                    <span class="tag" style="display:none;">All</span>
-                  </div>
-                </div>
-              </a>
-              <a
-                class="game"
-                href="https://example.com/stickman-hook"
-                target="_blank"
-              >
-                <img src="stickman-hook.png" alt="Stickman Hook" />
-                <div class="game-content">
-                  <p>Stickman Hook</p> <p class="author">Madbox</p>
-                  <div class="tag-container">
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      platformer&#x27;)&#x27;=""
-                      >Platformer</span
-                    >
-                    <span class="tag" style="display:none;">All</span>
-                  </div>
-                </div>
-              </a>
-              <a
-                class="game"
-                href="https://example.com/subway-surfers"
-                target="_blank"
-              >
-                <img src="subway-surfers.png" alt="Subway Surfers" />
-                <div class="game-content">
-                  <p>Subway Surfers</p> <p class="author">SYBO &amp; Kiloo</p>
-                  <div class="tag-container">
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      runner&#x27;)&#x27;=""
-                      >Runner</span
-                    >
-                    <span
-                      class="tag"
-                      onclick="filterByTag("
-                      speed&#x27;)&#x27;=""
-                      >Speed</span
-                    >
-                    <span class="tag" style="display:none;">All</span>
-                  </div>
-                </div>
-              </a>
+
               <a
                 class="game"
                 href="https://example.com/slither-io"
                 target="_blank"
               >
-                <img src="slither-io.png" alt="Slither.io" />
+                <img src="slither-io.png" alt="slither.io" />
                 <div class="game-content">
-                  <p>Slither.io</p> <p class="author">Steve Howse</p>
+                  <p>slither.io</p>
+                  <p class="author">Steve Howse</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -740,10 +693,12 @@
                   </div>
                 </div>
               </a>
+
               <a class="game" href="https://example.com/slope" target="_blank">
                 <img src="slope.png" alt="Slope" />
                 <div class="game-content">
-                  <p>Slope</p> <p class="author">Y8 Games</p>
+                  <p>Slope</p>
+                  <p class="author">Y8 Games</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -755,6 +710,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/slope-2"
@@ -762,7 +718,8 @@
               >
                 <img src="slope-2.png" alt="Slope 2" />
                 <div class="game-content">
-                  <p>Slope 2</p> <p class="author">Y8 Games</p>
+                  <p>Slope 2</p>
+                  <p class="author">Y8 Games</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -774,6 +731,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/slope-3"
@@ -781,7 +739,8 @@
               >
                 <img src="slope-3.png" alt="Slope 3" />
                 <div class="game-content">
-                  <p>Slope 3</p> <p class="author">Y8 Games</p>
+                  <p>Slope 3</p>
+                  <p class="author">Y8 Games</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -793,10 +752,12 @@
                   </div>
                 </div>
               </a>
+
               <a class="game" href="https://example.com/snake" target="_blank">
                 <img src="snake.png" alt="Snake" />
                 <div class="game-content">
-                  <p>Snake</p> <p class="author">FatGarfield777</p>
+                  <p>Snake</p>
+                  <p class="author">FatGarfield778</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -814,10 +775,12 @@
                   </div>
                 </div>
               </a>
+
               <a class="game" href="https://example.com/stack" target="_blank">
                 <img src="stack.png" alt="Stack" />
                 <div class="game-content">
-                  <p>Stack</p> <p class="author">Ketchapp</p>
+                  <p>Stack</p>
+                  <p class="author">Ketchapp</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -835,6 +798,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/stickman-hook"
@@ -842,7 +806,8 @@
               >
                 <img src="stickman-hook.png" alt="Stickman Hook" />
                 <div class="game-content">
-                  <p>Stickman Hook</p> <p class="author">Madbox</p>
+                  <p>Stickman Hook</p>
+                  <p class="author">Madbox</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -854,6 +819,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/subway-surfers"
@@ -861,7 +827,8 @@
               >
                 <img src="subway-surfers.png" alt="Subway Surfers" />
                 <div class="game-content">
-                  <p>Subway Surfers</p> <p class="author">SYBO &amp; Kiloo</p>
+                  <p>Subway Surfers</p>
+                  <p class="author">SYBO &amp; Kiloo</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -879,6 +846,7 @@
                   </div>
                 </div>
               </a>
+
               <a
                 class="game"
                 href="https://example.com/twitch-tetris"
@@ -886,7 +854,8 @@
               >
                 <img src="twitch-tetris.png" alt="Twitch Tetris" />
                 <div class="game-content">
-                  <p>Twitch Tetris</p> <p class="author">Rossipotti</p>
+                  <p>Twitch Tetris</p>
+                  <p class="author">Rossipotti</p>
                   <div class="tag-container">
                     <span
                       class="tag"
@@ -901,11 +870,6 @@
             </div>
 
             <script>
-              // Function to set the href attribute for each game link
-              function setGameLink(gameLink) {
-                var baseUrl = 'https://example.com/'; // Change this to your base URL
-                return baseUrl + gameLink;
-              }
 
               // Function to filter games based on search input
               function filterGames() {
